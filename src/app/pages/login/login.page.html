@@ -1,0 +1,31 @@
+<ion-content class="ion-text-center" color="dark">
+  <app-header></app-header>
+
+  <form > <!-- (ngSubmit)="login()"  -->
+    <ion-grid>      
+      <ion-row>
+        <ion-col>
+          <ion-input placeholder="Número de Identificacion" required > <!-- [(ngModel)]="usuario.CcUsuario" [ngModelOptions]="{standalone: true}"-->         
+          </ion-input>
+          <br>
+          <ion-input placeholder="Contraseña" type="password" required >  <!-- [(ngModel)]="usuario.Contrasena"  [ngModelOptions]="{standalone: true}"-->        
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" shape="round" fill="outline" color="success">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>     
+    </ion-grid>
+  </form>
+    <ion-grid>
+      <ion-row>
+        <ion-col>                    
+          <ion-button type="submit" shape="round" fill="outline" color="success"> <a href="/registro" style="color: #28a745; text-decoration: none;">Registrarse</a></ion-button>                 
+        </ion-col>      
+      </ion-row>
+    </ion-grid>
+
+  
+</ion-content>
