@@ -1,14 +1,14 @@
 <ion-content class="ion-text-center" color="dark">
   <app-header></app-header>
 
-  <form > <!-- (ngSubmit)="login()"  -->
+  <form  (ngSubmit)="login()"> <!--   -->
     <ion-grid>      
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Número de Identificacion" required > <!-- [(ngModel)]="usuario.CcUsuario" [ngModelOptions]="{standalone: true}"-->         
+          <ion-input placeholder="Nombre de Usuario" required [(ngModel)]="usuario.usuario" [ngModelOptions]="{standalone: true}"> <!-- -->         
           </ion-input>
           <br>
-          <ion-input placeholder="Contraseña" type="password" required >  <!-- [(ngModel)]="usuario.Contrasena"  [ngModelOptions]="{standalone: true}"-->        
+          <ion-input placeholder="Contraseña" type="password" required [(ngModel)]="usuario.contrasena"  [ngModelOptions]="{standalone: true}" >  <!-- -->        
           </ion-input>
         </ion-col>
       </ion-row>
