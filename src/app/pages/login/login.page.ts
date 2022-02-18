@@ -33,8 +33,7 @@ export class LoginPage implements OnInit {
           this.usuario.contrasena = "";
           //Guardar los datos del usuario 
           this.generalService.guardarStorage(this.usuario);                    
-          //Navegar a la pagina principal
-          this.router.navigateByUrl('folder/Inbox');
+          location.reload();
         }else{
           //se vacia el campo de contraseña
           this.usuario.contrasena = "";
