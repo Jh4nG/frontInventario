@@ -1,0 +1,50 @@
+<ion-content class="ion-text-center" color="dark">
+  <app-header></app-header>
+  <br><br><br>
+  <form (ngSubmit)="registro()"> <!--(ngSubmit)="registro()"-->
+    <ion-grid>    
+      <ion-row>
+        <ion-col>
+          <ion-input placeholder="Identificacion" required [(ngModel)]="usuario.idUsuario" [ngModelOptions]="{standalone: true}" > <!---[(ngModel)]="usuario.idUsuario" [ngModelOptions]="{standalone: true}"-->          
+          </ion-input>          
+          <ion-input placeholder="usuario" required [(ngModel)]="usuario.usuario" [ngModelOptions]="{standalone: true}"> <!--[(ngModel)]="usuario.usuario" [ngModelOptions]="{standalone: true}"-->          
+          </ion-input>          
+          <ion-input placeholder="Nombre" required [(ngModel)]="usuario.nomUsuario" [ngModelOptions]="{standalone: true}"> <!--[(ngModel)]="usuario.nomUsuario" [ngModelOptions]="{standalone: true}"-->          
+          </ion-input>          
+          <ion-input placeholder="Contraseña" type="password" required [(ngModel)]="usuario.contrasena"  [ngModelOptions]="{standalone: true}"> <!--[(ngModel)]="usuario.contrasena"  [ngModelOptions]="{standalone: true}"-->          
+          </ion-input>
+        </ion-col>        
+      </ion-row>      
+        <ion-row>
+          <ion-col>
+            <ion-select placeholder="Rol" required [(ngModel)]="usuario.rolUsuario"   [ngModelOptions]="{standalone: true}">          
+              <ion-select-option value="1">
+                Administrador
+              </ion-select-option>
+              <ion-select-option value="2">
+                Operario
+              </ion-select-option>
+            </ion-select>      
+          </ion-col>
+        </ion-row>   
+        <ion-row>
+          <ion-col>
+            <ion-select placeholder="Cliente" required [(ngModel)]="usuario.cliente"   [ngModelOptions]="{standalone: true}">          
+              <ion-select-option value="1">
+                Cl1
+              </ion-select-option>
+              <ion-select-option value="2">
+                Cl2
+              </ion-select-option>
+            </ion-select>      
+          </ion-col>
+        </ion-row>    
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" shape="round" fill="outline" color="success">Registrarse</ion-button>
+        </ion-col>
+      </ion-row>
+      
+    </ion-grid>
+  </form>
+</ion-content>
