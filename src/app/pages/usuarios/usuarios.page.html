@@ -13,13 +13,25 @@
           <div>Identidicacion</div>
         </ion-col>
         <ion-col>
-          <div>Usuario</div>
+          <div>Nombre</div>
         </ion-col>
         <ion-col>
           <div>Rol</div>
         </ion-col>
       </ion-row>
     </ion-grid>
-
+    <ion-grid>
+      <ion-row *ngFor="let u of usuario">
+        <ion-col>
+          <div>{{ u.idUsuario }}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{ u.nomUsuario }}</div>
+        </ion-col>
+        <ion-col>
+          <div>{{ u.rolUsuario }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   
 </ion-content>
