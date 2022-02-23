@@ -49,4 +49,8 @@ export class UsuariosPage implements OnInit {
     );
   }
 
+  borrarTarea(indice: number){
+    //el splice remueve la tarea y actualiza el indice
+    debugger
+  }
 }

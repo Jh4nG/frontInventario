@@ -1,12 +1,5 @@
 <ion-content class="ion-text-center">
   <app-header></app-header>
-  <ion-list color="dark">
-    <!--Usamos un ciclo for para mostrar los usuarios-->
-    <!--ion-item *ngFor="let p of getUsuarios()" color="dark" detail >
-    <ion-label > {{p.usuario.usuario}}</ion-label>  
-    </ion-item-->
-  </ion-list>
-
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -20,16 +13,27 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+    <hr>
     <ion-grid>
       <ion-row *ngFor="let u of usuario">
         <ion-col>
-          <div>{{ u.idUsuario }}</div>
-        </ion-col>
-        <ion-col>
-          <div>{{ u.nomUsuario }}</div>
-        </ion-col>
-        <ion-col>
-          <div>{{ u.rolUsuario }}</div>
+          <ion-item-sliding>
+            <ion-item>
+              <div>{{ u.idUsuario }}</div>
+              <div>{{ u.nomUsuario }}</div>
+              <div>{{ (u.rolUsuario == 1) ? 'Administrador' : 'Operario' }}</div>
+            </ion-item>
+            <ion-item-options side="end">
+              <ion-item-option color="danger" expandable (click)="borrarTarea(i)">
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
+            <ion-item-options side="start">
+              <ion-item-option color="primary" expandable (click)="borrarTarea(i)">
+                <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
         </ion-col>
       </ion-row>
     </ion-grid>
